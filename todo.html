@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>
+To Do
+</title>
+<style>
+body{
+background-color:black;
+}
+header {
+left:20%;
+box-sizing:border-box;
+width:60%;
+height:100px;
+background-color:black;
+border:crimson 3px outset;
+align-items:center;
+position:relative;
+border-radius:10px;
+}
+.banner {
+color:crimson;
+position:absolute;
+left:40;
+top:-10;
+font-size:x-large;
+align-items:center;
+}
+input {
+box-sizing:border box;
+border:5px solid crimson;
+border-radius:5px;
+left:30%;
+top:30;
+position:absolute;
+max-height:45px;
+width:35%;
+color:black;
+text-align:center;
+font-size:x-large;
+}
+#addbtn {
+position:absolute;
+top: 32%;
+left:68%;
+color:black;
+font-weight:bolder;
+font-variant:small-caps;
+background-color:crimson;
+height:33px;
+}
+.topd {
+box-sizing:border box;
+background-color:crimson;
+height:10px;
+position:absolute;
+width:100%;
+}
+.bottomd{
+box-sizing:bodor box;
+background-color:crimson;
+position:absolute;
+top:83;
+height:10px;
+width:100%;
+}
+.activityblock {
+color:black;
+overflow:auto;
+width:60%;
+left:20%;
+border:5px crimson solid;
+top:6%;
+position:relative;
+height:75%;
+border-radius:5px;
+background-color:black;
+}
+#p1 {
+background-color:black;
+color:crimson;
+font-weight:bold;
+font-variant:small-caps;
+text-align:center;
+font-size:large;
+max-height:50px;
+background-color:white;
+}
+#removebtn {
+background-color:red;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="banner"><h1>To do</h1></div>
+<div class="topd">.</div>
+<div class="inputbox"><input  id="in" type="text" placeholder="Enter your activity" /></div>
+<div class="btn"><button id="addbtn" onclick=activities()>Add</button></div>
+<div class="bottomd">.</div>
+</header>
+<div class="activityblock" id="activityblock"><p id="demo"></p></div>
+<script>
+var count=0;
+function activities() {
+++count;
+const para=document.createElement("p");
+const paraid=document.createAttribute("id");
+paraid.value="p{count}";
+const node=document.createTextNode(document.getElementById("in").value);
+const done=document.createElement("button");
+const donetext=document.createTextNode("Done");
+done.appendChild(donetext);
+const remove=document.createElement("button");
+const removetext=document.createTextNode("Remove");
+remove.appendChild(removetext);
+const removeid=document.createAttribute("id");
+removeid.value="removebtn";
+remove.setAttributeNode(removeid);
+if (document.getElementById("in").value!="") {
+para.appendChild(done);
+para.appendChild(remove);
+para.appendChild(node);
+const element=document.getElementById("activityblock");
+element.appendChild(para);
+const paraid=document.createAttribute("id");
+paraid.value="p1";
+para.setAttributeNode(paraid);
+document.getElementById("removebtn").addEventListener("click",()=
+})
+}
+document.getElementById("in").value="";
+}
+</script>
+</body>
+</html>
